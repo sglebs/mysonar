@@ -8,7 +8,7 @@ ENV SONARQUBE_HOME /opt/sonarqube
 
 # list bundled plugins
 RUN ls -la $SONARQUBE_HOME/lib/bundled-plugins
-# remove bundled java plugin
+# remove bundled java, c#, js plugin
 RUN rm -rf $SONARQUBE_HOME/lib/bundled-plugins/sonar-java-plugin-*.jar
 RUN rm -rf $SONARQUBE_HOME/lib/bundled-plugins/sonar-csharp-plugin-*.jar
 RUN rm -rf $SONARQUBE_HOME/lib/bundled-plugins/sonar-javascript-plugin-*.jar
@@ -74,5 +74,4 @@ RUN cd $SONARQUBE_HOME/extensions/plugins && \
 	
 	        
 EXPOSE 9000
-EXPOSE 9092
 
