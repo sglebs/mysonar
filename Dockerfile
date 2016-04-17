@@ -1,0 +1,5 @@
+FROM sonar:latest
+
+EXPOSE 9000
+EXPOSE 9092
+
